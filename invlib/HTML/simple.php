@@ -1,7 +1,19 @@
 <?php
 // (A) HTML HEADER & STYLES
 $this->data = "<!DOCTYPE html><html><head><style>".
-"html,body{font-family:sans-serif}#invoice{max-width:800px;margin:0 auto}#bigi{margin-bottom:20px;font-size:28px;font-weight:bold;color:#ad132f;padding:10px}#company,#billship{margin-bottom:30px}#company img{max-width:180px;height:auto}#billship,#company,#items{width:100%;border-collapse:collapse}#billship td{width:33%}#billship td,#items td,#items th{padding:10px}#items th{text-align:left;border-top:2px solid #000;border-bottom:2px solid #000}#items td{border-bottom:1px solid #ccc}.idesc{color:#999}.ttl{background:#fafafa;font-weight:700}.right{text-align:right}#notes{background:#efefef;padding:10px;margin-top:30px}".
+"html,body{font-family:sans-serif}#invoice{max-width:800px;margin:0 auto}#bigi{margin-bottom:20px;font-size:28px;font-weight:bold;color:#ad132f;padding:10px}#company,#billship{margin-bottom:30px}#company img{max-width:180px;height:auto}#billship,#company,#items{width:100%;border-collapse:collapse}#billship td{width:33%}#billship td,#items td,#items th{padding:10px}#items th{text-align:left;border-top:2px solid #000;border-bottom:2px solid #000}#items td{border-bottom:1px solid #ccc}.idesc{color:#999}.ttl{background:#fafafa;font-weight:700}.right{text-align:right}#notes{background:#efefef;padding:10px;margin-top:30px}.float{
+	position:fixed;
+	width:40px;
+	height:40px;
+	padding:8px;
+	top:40px;
+	right:40px;
+	background-color:black;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}".
 "</style></head><body><div id='invoice'>";
 
 // (B) COMPANY
@@ -50,4 +62,4 @@ if (count($this->notes)>0) {
 }
 
 // (I) CLOSE
-$this->data .= "</div></body></html>";
+$this->data .= "</div><img src='../../../logos/print.png' onClick='window.print()' class='float'/></body></html>";
